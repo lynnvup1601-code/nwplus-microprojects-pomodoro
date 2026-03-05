@@ -8,7 +8,7 @@ function App() {
   const [rewards, setRewards] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:8000/api/rewards")
+    fetch(`${import.meta.env.VITE_API_URL}/api/rewards`)
       .then((res) => res.json())
       .then((data) => {
         const rewardNames = (data.rewards ?? []).map((entry) => entry.reward);

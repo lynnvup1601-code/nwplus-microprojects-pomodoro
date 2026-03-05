@@ -79,7 +79,7 @@ export default function Timer({ setPage, setRewards }) {
               <h3>Start studying</h3>
               <TimerButton
                 value={30}
-                onClick={() => handleSetDuration(30 * 60)}
+                onClick={() => handleSetDuration(1)}
               />
               <TimerButton
                 value={45}
@@ -116,7 +116,7 @@ export default function Timer({ setPage, setRewards }) {
       </div>
       {showReward && (
         <RewardModal
-          durationMinutes={duration / 60}
+          durationMinutes={duration}
           onClose={() => setShowReward(false)}
           setRewards={setRewards}
         />

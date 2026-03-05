@@ -15,7 +15,7 @@ function RewardModal({ durationMinutes, onClose, setRewards }) {
 
   async function handleAccept() {
     try {
-      const res = await fetch("http://localhost:8000/api/focus-sessions", {
+      const res = await fetch(`${import.meta.env.VITE_API_URL}/api/focus-sessions`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ focusMinutes: durationMinutes }),
